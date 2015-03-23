@@ -57,6 +57,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+.fixed ul>li:nth-child(1){
+    visibility:visible;
+}
+.unfixed ul>li:nth-child(1){
+    visibility:hidden;
+}
+
 .pull_right {
     float: right;
 }
@@ -3321,7 +3328,6 @@ abbr {
 
 /* To fix the grid into a different size, set max-width to your desired width */
 .column, .columns {
-    margin-left: 1.81818%;
     float: left;
     min-height: 1px;
     -webkit-box-sizing: border-box;
@@ -3330,7 +3336,7 @@ abbr {
 }
 
 .column:first-child, .columns:first-child, .alpha {
-    margin-left: 0;
+
 }
 
 .column.omega, .columns.omega {
@@ -5910,11 +5916,11 @@ img {
     float: left;
     text-align: left;
     height: auto;
-    -webkit-border-radius: none;
-    -moz-border-radius: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
     -ms-border-radius: none;
     -o-border-radius: none;
-    border-radius: none;
+    border-radius: 0;
 }
 @media only screen and (min-width: 768px) and (max-width: 1099px) {
     .navbar li .dropdown ul > li {
@@ -8391,7 +8397,30 @@ article figure:first-child {
 #inner-nav .btn:hover {
     background: #f2f2f2;
 }
-
+.corner{
+    border-radius: 5px;
+    border: 2px solid #888d91;
+}
+li.corner.three.columns>div{
+    margin: auto;
+    float: none;
+}
+ul li.corner{
+    margin: 5px 5px 5px 5px;
+    padding: 5px;
+}
+div.corner.row>div:first-child {
+    margin: 0 0 0 10px;
+}
+.webshopimage{
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    border: 2px solid #888d91;
+}
+.active{
+    background: #3085d6;
+}
 #inner-nav .btn.active, #inner-nav #submit-link .btn {
     background: #3085d6;
 }

@@ -57,6 +57,8 @@
 	<!--
 	Include gumby.js followed by UI modules followed by gumby.init.js
 	Or concatenate and minify into a single file -->
+
+    <script src="js/libs/events.min.js"></script>
 	<script gumby-touch="js/libs" src="js/libs/gumby.js"></script>
 	<script src="js/libs/ui/gumby.retina.js"></script>
 	<script src="js/libs/ui/gumby.fixed.js"></script>
@@ -70,7 +72,7 @@
 	<script src="js/libs/gumby.init.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
-    <script gumby-debug="" gumby-touch="/bower_components/gumby/js/libs" src="http://gumbyframework.com/js/libs/gumby.min.js?1379449666"></script>
+    <script gumby-touch="js/libs" src="js/libs/gumby.min.js"></script>
 
 	<!-- Change UA-XXXXX-X to be your site's ID -->
 	<!--<script>
@@ -91,16 +93,16 @@
         <div class="row">
             <a class="toggle" gumby-trigger="#navbar-main-nav #main-nav" href="#"><i class="icon-menu"></i></a>
             <h1 class="four columns logo">
-                <a href="/">
+                <a href="">
                     <img src="img/pizzaexpress.png" gumby-retina="">
                 </a>
             </h1>
             <nav class="ten columns pull_right">
                 <ul id="main-nav">
-                    <li><a href=""><span>Rólunk </span><i class="icon-archive" title="Features"></i></a></li>
-                    <li><a href=""><span>Akciók </span><i class="icon-archive" title="Features"></i></a></li>
+                    <li><a href=""><span>Rólunk </span><i class="icon-archive" title="Rolunk"></i></a></li>
+                    <li><a href=""><span>Akciók </span><i class="icon-archive" title="Akciok"></i></a></li>
                     <li>
-                        <a href=""><span>Étlap </span><i class="icon-doc-text" title="Documentation"></i></a>
+                        <a href=""><span>Étlap </span><i class="icon-doc-text" title="Etlap"></i></a>
                         <div class="dropdown">
                             <ul>
                                 <li><a href="">Ázsiai ételek</a></li>
@@ -115,8 +117,9 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href=""><span>Napi ajánlat </span><i class="icon-cog" title="Customize"></i></a></li>
-                    <li><a href=""><span>Kapcsolat </span><i class="icon-chat" title="community"></i></a></li>
+                    <li><a href=""><span>Napi ajánlat </span><i class="icon-cog" title="Napi ajanlat"></i></a></li>
+                    <li><a href=""><span>Rendelés </span><i class="icon-cog" title="Rendeles"></i></a></li>
+                    <li><a href=""><span>Kapcsolat </span><i class="icon-chat" title="Kapcsolat"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -159,56 +162,214 @@
 <div class="wrapper nopad">
     <div class="row">
         <section class="two columns">
-            <nav id="sidebar-nav-holder" class="vertical-nav unfixed" gumby-fixed="top" gumby-pin="[data-target='help-im-stuck']" style="top: 0px; left: 81.5px; width: 300px;">
+            <nav id="sidebar-nav-holder" class="vertical-nav unfixed" gumby-fixed="top" gumby-pin="[data-target='Tesztak']">
                 <ul id="sidebar-nav">
-                    <li class=""><a href="#Keszetelek" class="skip" gumby-update="" gumby-duration="600" gumby-goto="[data-target='Keszetelek']">Készételek</a></li>
-                    <li class="active"><a href="#Koretek" class="skip" gumby-update="" gumby-duration="600" gumby-goto="[data-target='Koretek']">Köretek</a></li>
-                    <li class=""><a href="#Talak" class="skip" gumby-update="" gumby-duration="600" gumby-goto="[data-target='Talak']">Tálak</a></li>
-                    <li class=""><a href="#Tesztak" class="skip" gumby-update="" gumby-duration="600" gumby-goto="[data-target='Tesztak']">Tészták</a></li>
+                    <li><a href="#" class="pretty  skip " gumby-goto="top" gumby-duration="600"><i class="icon icon-up-open"></i>Vissza</a></li>
+                    <li ><a href="#Keszetelek" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Keszetelek']">Készételek</a></li>
+                    <li ><a href="#Koretek" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Koretek']">Köretek</a></li>
+                    <li ><a href="#Talak" class="pretty  skip "   gumby-update gumby-duration="600" gumby-goto="[data-target='Talak']">Tálak</a></li>
+                    <li ><a href="#Tesztak" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Tesztak']">Tészták</a></li>
                 </ul>
             </nav>
         </section>
         <section class="eleven columns push_one" id="docs-content">
 
 
-            <div class="left-center" data-target="Keszetelek">
+            <div id="Keszetelek" class="twelve columns left-center" data-target="Keszetelek">
                 <h2>Készételek</h2>
-                <h4>sadfasfsf:</h4>
 
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
             </div>
 
 
 
-            <div class="left-center" data-target="Koretek">
+            <div id="Koretek" class="twelve columns left-center" data-target="Koretek">
                 <h2>Köretek</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
 
-                <ul class="disc">
-                    <li>kép</li>
-                    <li>kép</li>
-                    <li>kép</li>
-                    <li>kééép</li>
+                <ul class="text-center">
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">nyers tökfőzelék</div>
+                        <div class=" twelve columns ttip" data-tooltip="valamilyen kaja">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns">990 Ft</div>
+                                <div class="six columns"><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">vajas tökfőzelék</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen krumpli">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns">599 Ft</div>
+                                <div class="six columns"><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">nyers bikfic</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen valami">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">900 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">tyúk főzelék</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen rizs">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">990 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">zöld bukta</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen bigyó">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">999 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">nyers hátfájás</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen izé">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">590 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">nyers modor</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen akármi">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">509 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">zöld káposzta</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen valami">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">990 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">hangyapaprikás</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen tök">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">900 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">fűszeres lábszár</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen izébizé">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">500 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">utolsó valami</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen valami">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">520 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="corner three columns row">
+                        <div class="twelve columns">haha, mégsem</div>
+                        <div class="twelve columns ttip" data-tooltip="valamilyen sültkrumpli">
+                            <img class="webshopimage" src="img/pizzaexpress.png">
+                        </div>
+                        <div class="twelve columns">
+                            <div class="corner row">
+                                <div class="six columns ">500 Ft</div>
+                                <div class="six columns "><i class="icon-basket"></i></div>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
-
-
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
             </div>
 
 
 
-            <div class="left-center" data-target="Talak">
+            <div id="Talak" class="twelve columns left-center" data-target="Talak">
                 <h2>Tálak</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
             </div>
 
-            <div class="left-center" data-target="Tesztak">
+            <div id="Tesztak" class="twelve columns left-center" data-target="Tesztak">
                 <h2>Tészták</h2>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
             </div>
         </section>
     </div>
 </div>
+    <script>
+        if(!window.jQuery) {
+            if(!oldieCheck) {
+                document.write('<script src="js/libs/jquery-2.0.2.min.js"><\/script>');
+            } else {
+                document.write('<script src="js/libs/jquery-1.10.1.min.js"><\/script>');
+            }
+        }
+    </script>
 
   </body>
 </html>

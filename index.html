@@ -162,7 +162,7 @@
 <div class="wrapper nopad">
     <div class="row">
         <section class="two columns">
-            <nav id="sidebar-nav-holder" class="vertical-nav unfixed" gumby-fixed="top" gumby-pin="[data-target='Tesztak']">
+            <nav id="sidebar-nav-holder" class="unfixed" gumby-fixed="top" gumby-pin="[data-target='Tesztak']">
                 <ul id="sidebar-nav">
                     <li><a href="#" class="pretty  skip " gumby-goto="top" gumby-duration="600"><i class="icon icon-up-open"></i>Vissza</a></li>
                     <li ><a href="#Keszetelek" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Keszetelek']">Készételek</a></li>
@@ -197,7 +197,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns">990 Ft</div>
-                                <div class="six columns"><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -210,7 +210,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns">599 Ft</div>
-                                <div class="six columns"><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -223,7 +223,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">900 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -236,7 +236,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">990 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -249,7 +249,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">999 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -262,7 +262,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">590 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -275,7 +275,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">509 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -288,7 +288,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">990 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -301,7 +301,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">900 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -314,7 +314,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">500 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -327,7 +327,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">520 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -340,7 +340,7 @@
                         <div class="twelve columns">
                             <div class="corner row">
                                 <div class="six columns ">500 Ft</div>
-                                <div class="six columns "><i class="icon-basket"></i></div>
+                                <div class="six columns ttip" data-tooltip="Kosárba"><i class="icon-basket"></i></div>
                             </div>
                         </div>
                     </li>
@@ -361,6 +361,64 @@
         </section>
     </div>
 </div>
+    <div id="order" class="two columns fixed corner" style="height: 250px; width: 150px; background: #ededed; position: fixed; left: 10%; top: 50% ">
+
+
+    </div>
+    <!-- Modal Section -->
+    <div class="modal" id="modal1">
+        <div class="content">
+            <a class="close switch" gumby-trigger="|#modal1"><i class="icon-cancel" /></i></a>
+            <div class="ten columns centered text-center row">
+                <h2>Extra feltétek</h2>
+
+                <div class="centered row">
+                    <div class="seven columns">Megnevezés</div>
+                    <div class="seven columns">Ár</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Plusz sajt</div>
+                    <div class="seven columns">150Ft</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Ananász</div>
+                    <div class="seven columns">100Ft</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Tojás</div>
+                    <div class="seven columns">60Ft</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Szalámi</div>
+                    <div class="seven columns">120Ft</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Ananász</div>
+                    <div class="seven columns">100Ft</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Tojás</div>
+                    <div class="seven columns">60Ft</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Szalámi</div>
+                    <div class="seven columns">120Ft</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Ananász</div>
+                    <div class="seven columns">100Ft</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Tojás</div>
+                    <div class="seven columns">60Ft</div>
+                </div>
+                <div class="centered row">
+                    <div class="seven columns">Szalámi</div>
+                    <div class="seven columns">120Ft</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         if(!window.jQuery) {
             if(!oldieCheck) {
@@ -370,6 +428,17 @@
             }
         }
     </script>
+<script>
+    $(document).ready(function(){
+        $('i').click(function(){
+            $('.modal').addClass('active');
+        });
+
+
+
+    });
+
+</script>
 
   </body>
 </html>

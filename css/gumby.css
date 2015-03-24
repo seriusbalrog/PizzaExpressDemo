@@ -8406,6 +8406,7 @@ li.corner.three.columns>div{
     float: none;
 }
 ul li.corner{
+    min-height: 220px;
     margin: 5px 5px 5px 5px;
     padding: 5px;
 }
@@ -8413,8 +8414,8 @@ div.corner.row>div:first-child {
     margin: 0 0 0 10px;
 }
 .webshopimage{
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 100%;
     border: 2px solid #888d91;
 }

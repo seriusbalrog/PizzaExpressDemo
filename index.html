@@ -342,8 +342,8 @@
 </div>
 
     <div id="order" class="two columns fixed centered text-center corner">
-        <p>Rendelés</p>
-        <ul>
+        <h5>Rendelés</h5>
+        <ul id="basket" class="text-left">
 
         </ul>
     </div>
@@ -353,51 +353,56 @@
             <a class="close switch" gumby-trigger="|#modal1"><i class="icon-cancel" /></i></a>
             <div class="ten columns centered text-center row">
                 <h2>Extra feltétek</h2>
-
-                <div class="centered row">
-                    <div class="seven columns">Megnevezés</div>
-                    <div class="seven columns">Ár</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Plusz sajt</div>
-                    <div class="seven columns">150Ft</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Ananász</div>
-                    <div class="seven columns">100Ft</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Tojás</div>
-                    <div class="seven columns">60Ft</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Szalámi</div>
-                    <div class="seven columns">120Ft</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Ananász</div>
-                    <div class="seven columns">100Ft</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Tojás</div>
-                    <div class="seven columns">60Ft</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Szalámi</div>
-                    <div class="seven columns">120Ft</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Ananász</div>
-                    <div class="seven columns">100Ft</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Tojás</div>
-                    <div class="seven columns">60Ft</div>
-                </div>
-                <div class="centered row">
-                    <div class="seven columns">Szalámi</div>
-                    <div class="seven columns">120Ft</div>
-                </div>
+                <table class="striped rounded">
+                    <thead>
+                    <tr>
+                        <th>Megnevezés</th>
+                        <th>Ár</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Ananász</td>
+                        <td>100Ft</td>
+                    </tr>
+                    <tr>
+                        <td>Tojás</td>
+                        <td>60Ft</td>
+                    </tr>
+                    <tr>
+                        <td>Szalámi</td>
+                        <td>120Ft</td>
+                    </tr>
+                    <tr>
+                        <td>Plusz sajt</td>
+                        <td>150Ft</td>
+                    </tr>
+                    <tr>
+                        <td>Plusz sajt</td>
+                        <td>150Ft</td>
+                    </tr>
+                    <tr>
+                        <td>Ananász</td>
+                        <td>100Ft</td>
+                    </tr>
+                    <tr>
+                        <td>Tojás</td>
+                        <td>60Ft</td>
+                    </tr>
+                    <tr>
+                        <td>Szalámi</td>
+                        <td>120Ft</td>
+                    </tr>
+                    <tr>
+                        <td>Plusz sajt</td>
+                        <td>150Ft</td>
+                    </tr>
+                    <tr>
+                        <td>Plusz sajt</td>
+                        <td>150Ft</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -412,12 +417,18 @@
     </script>
 <script>
     $(document).ready(function(){
-        $('i').click(function(){
+        var basketId = 0;
+        $('.icon-basket').click(function(){
+            basketId++;
+           /*console.log($(this).closest('li:first-child').text());*/
+            $('#basket').append("<li id="+basketId+">"+$(this).closest('li').find('div').text()+"</li>");
+            $('#'+basketId+'').append("<ul></ul>");
             $('.modal').addClass('active');
         });
-
-
-
+        $('table tbody tr').click(function(){
+           /* console.log($(this).closest('tr').closest('tr').text());*/
+            $('#'+basketId+' ul').append("<li>"+$(this).closest('tr').text()+"</li>");
+        });
     });
 
 </script>

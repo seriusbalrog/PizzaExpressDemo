@@ -7726,6 +7726,10 @@ table tr td {
 table tr td, table tbody tr td {
     font-size: 16px;
 }
+table tbody tr:hover{
+    background: #3085d6;
+    color:white;
+}
 table tr td:first-child {
     font-weight: bold;
 }
@@ -7742,6 +7746,12 @@ table.striped tr:nth-of-type(even),
 table table tr.stripe,
 table table tr.striped {
     background-color: #e5e5e5;
+}
+table.striped tr:nth-of-type(even):hover,
+table table tr.stripe:hover,
+table table tr.striped:hover {
+    background: #3085d6;
+    color: white;
 }
 table.rounded {
     border-radius: 4px;
@@ -8417,14 +8427,20 @@ div.corner.row{
    background-color: #000000;
 }
 #order{
+    overflow-x: auto;
+    overflow-y: auto;
     height: 250px;
-    width: 150px;
+    width: 170px;
     background: #ededed;
     position: fixed;
     margin-left: 20px;
     margin-top: 400px;
     left: 0;
     top: 0;
+}
+#order ul{
+    margin-left: 25px;
+    list-style-type: disc;
 }
 i:hover{
     color: #3085d6;
@@ -8443,25 +8459,18 @@ div.price {
     margin: 5px 5px 5px 5px;
     bottom: 2px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
     .shop-image{
-        left: 200px;
-        bottom: 50px;
+        position: absolute;
+        bottom: 45px;
+        left: 10px;
     }
-}
-.shop-image{
-    position: absolute;
-    bottom: 45px;
-    left: 10px;
 }
 .webshopimage{
     height: 90px;
     width: 90px;
     border-radius: 100%;
     border: 2px solid #888d91;
-}
-.active{
-    background: #3085d6;
 }
 #inner-nav .btn.active, #inner-nav #submit-link .btn {
     background: #3085d6;

@@ -8401,17 +8401,58 @@ article figure:first-child {
     border-radius: 5px;
     border: 2px solid #888d91;
 }
-li.corner.three.columns>div{
+li.corner.columns>div{
     margin: auto;
     float: none;
+}
+.corner.row.items{
+    padding: 10px 10px 10px 10px;
 }
 ul li.corner{
     min-height: 220px;
     margin: 5px 5px 5px 5px;
     padding: 5px;
 }
-div.corner.row>div:first-child {
-    margin: 0 0 0 10px;
+div.corner.row{
+   background-color: #000000;
+}
+#order{
+    height: 250px;
+    width: 150px;
+    background: #ededed;
+    position: fixed;
+    margin-left: 20px;
+    margin-top: 400px;
+    left: 0;
+    top: 0;
+}
+i:hover{
+    color: #3085d6;
+}
+@media only screen and (max-width: 768px){
+    #order{
+        margin-left: 0;
+    }
+}
+li.items{
+    position: relative;
+}
+div.price {
+    position: absolute;
+    left: 0;
+    margin: 5px 5px 5px 5px;
+    bottom: 2px;
+}
+@media only screen and (max-width: 768px) {
+    .shop-image{
+        left: 200px;
+        bottom: 50px;
+    }
+}
+.shop-image{
+    position: absolute;
+    bottom: 45px;
+    left: 10px;
 }
 .webshopimage{
     height: 90px;

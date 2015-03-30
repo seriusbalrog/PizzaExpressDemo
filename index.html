@@ -162,17 +162,21 @@
 <div class="wrapper nopad">
     <div class="row">
         <section class="two columns">
-            <nav id="sidebar-nav-holder" class="unfixed" gumby-fixed="top" gumby-pin="[data-target='Tesztak']">
-                <ul id="sidebar-nav">
-                    <li><a href="#" class="pretty  skip " gumby-goto="top" gumby-duration="600"><i class="icon icon-up-open"></i>Vissza</a></li>
-                    <li ><a href="#Keszetelek" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Keszetelek']">Készételek</a></li>
-                    <li ><a href="#Koretek" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Koretek']">Köretek</a></li>
-                    <li ><a href="#Talak" class="pretty  skip "   gumby-update gumby-duration="600" gumby-goto="[data-target='Talak']">Tálak</a></li>
-                    <li ><a href="#Tesztak" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Tesztak']">Tészták</a></li>
-                </ul>
-            </nav>
+                <nav id="sidebar-nav-holder" class="unfixed" gumby-fixed="top" gumby-pin="[data-target='Tesztak']">
+                    <ul id="sidebar-nav">
+                        <li ><a href="#" class="pretty  skip " gumby-goto="top" gumby-duration="600"><i class="icon icon-up-open"></i>Vissza</a></li>
+                        <li ><a href="#Keszetelek" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Keszetelek']">Készételek</a></li>
+                        <li ><a href="#Koretek" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Koretek']">Köretek</a></li>
+                        <li ><a href="#Talak" class="pretty  skip "   gumby-update gumby-duration="600" gumby-goto="[data-target='Talak']">Tálak</a></li>
+                        <li ><a href="#Tesztak" class="pretty  skip "  gumby-update gumby-duration="600" gumby-goto="[data-target='Tesztak']">Tészták</a></li>
+                    </ul>
+                    <div id="order" class="centered text-center corner">
+                        <h5>Rendelés</h5>
+                        <ul id="basket" class="text-left"></ul>
+                    </div>
+                </nav>
         </section>
-        <section class="eleven columns push_one" id="docs-content">
+        <section class="eleven columns push_one bordered" id="docs-content">
 
 
             <div id="Keszetelek" class="twelve columns left-center" data-target="Keszetelek">
@@ -341,12 +345,6 @@
     </div>
 </div>
 
-    <div id="order" class="two columns fixed centered text-center corner">
-        <h5>Rendelés</h5>
-        <ul id="basket" class="text-left">
-
-        </ul>
-    </div>
     <!-- Modal Section -->
     <div class="modal" id="modal1">
         <div class="content">

@@ -172,7 +172,13 @@
                     </ul>
                     <div id="order" class="centered text-center corner">
                         <h5>Rendelés</h5>
+                        <div id="orderContent">
                         <ul id="basket" class="text-left"></ul>
+                        </div>
+                        <div id="orderFooter">
+                            <h5>Összesen:</h5>
+                            <p id="ttl">0 Ft</p>
+                        </div>
                     </div>
                 </nav>
         </section>
@@ -415,17 +421,23 @@
     </script>
 <script>
     $(document).ready(function(){
+        var total = 0;
         var basketId = 0;
         $('.icon-basket').click(function(){
             basketId++;
-           /*console.log($(this).closest('li:first-child').text());*/
-            $('#basket').append("<li id="+basketId+">"+$(this).closest('li').find('div').text()+"</li>");
+            total += parseInt($(this).closest('li').find('div.row.price').text().substr(28,4));
+           console.log($(this).closest('li').find('div.row.price').text().substr(28,4));
+            $('#basket').append("<li id="+basketId+">"+$(this).closest('li').find('div.twelve.columns').text()+$(this).closest('li').find('div.row.price').text()+"</li>");
             $('#'+basketId+'').append("<ul></ul>");
             $('.modal').addClass('active');
+            console.log($(this).closest('li').find('div.row.price').text());
+            $('#ttl').text(total.toString() + " Ft" );
         });
         $('table tbody tr').click(function(){
-           /* console.log($(this).closest('tr').closest('tr').text());*/
+            console.log($(this).closest('tr').closest('tr').find('td:nth-child(2)').text());
             $('#'+basketId+' ul').append("<li>"+$(this).closest('tr').text()+"</li>");
+            total+= parseInt($(this).closest('tr').closest('tr').find('td:nth-child(2)').text().substr(0,3));
+            $('#ttl').text(total.toString() + " Ft" );
         });
     });
 

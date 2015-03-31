@@ -11,7 +11,7 @@ dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+figure, figcaption, footer, header,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
     margin: 0;
@@ -20,6 +20,10 @@ time, mark, audio, video {
     font: inherit;
     font-size: 100%;
     vertical-align: baseline;
+}
+
+*{
+    text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
 }
 
 html {
@@ -53,14 +57,15 @@ a img {
     border: none;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+article, aside, details, figcaption, figure, footer, header, menu, nav, section, summary {
     display: block;
 }
 
 .fixed ul>li:nth-child(1){
     visibility:visible;
 }
-.unfixed ul>li:nth-child(1){
+
+.unfixed ul>li:nth-child(1) .skip{
     visibility:hidden;
 }
 
@@ -7663,7 +7668,7 @@ body .video.twitch, body .video.youtube.show_controls {
     top: 25%;
     margin: 0 auto;
     padding: 20px;
-    background: white;
+    background: #FFFBD3;
     z-index: 2;
     overflow: auto;
 }
@@ -7755,7 +7760,14 @@ table thead tr th {
 table.striped tr:nth-of-type(even),
 table table tr.stripe,
 table table tr.striped {
-    background-color: #e5e5e5;
+    background-color: #F6E39D;
+}
+table.striped tbody tr:nth-of-type(odd) {
+    background-color: #FFFBD3;
+}
+table.striped tbody tr:nth-of-type(odd):hover {
+    background: #862222;
+    color: white;
 }
 table.striped tr:nth-of-type(even):hover,
 table table tr.stripe:hover,
@@ -8446,16 +8458,36 @@ div.corner.row{
     margin-top: 10px;
 }
 #order>h5{
+    left: 10px;
+    width: 100%;
+    position: fixed;
     border-bottom: 1px solid #888d91;
-    padding: 5px 0 5px 0;
 }
 #order{
-    margin-top: 30px;
+    padding-top: 5px;
     background-color: #F6E39D;
+    height: 350px;
+    width: 170px;
+}
+#orderContent{
+    height: 245px;
+    width: 100%;
     overflow-x: auto;
     overflow-y: auto;
-    height: 250px;
-    width: 170px;
+    margin-top: 30px;
+    padding-top: 5px;
+}
+#order li{
+    font-size: 13px;
+}
+#orderFooter{
+    width: 100%;
+    margin: auto;
+    display: inline;
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    border-top: 1px solid #888d91;
 }
 #order ul{
     margin-left: 25px;
